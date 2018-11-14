@@ -14,7 +14,7 @@
     "browserify-middleware": "7.0.0",
     "@atomist/antlr": "^1.0.1",
     "@atomist/automation-client": "1.0.1",
-    "@atomist/tree-path":"1.0.1"
+    "@atomist/tree-path": "1.0.1"
   },
   "engines": {
     "node": "8.x"
@@ -27,5 +27,8 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^3.1.6"
+  }
 }
