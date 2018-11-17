@@ -22,6 +22,7 @@ const app = express_1.default();
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 //provide browserified versions of all the files in the script directory
 app.use('/js', browserify_middleware_1.default(__dirname + '/script'));
+app.use(express_1.default.json());
 // http://expressjs.com/en/starter/static-files.html
 app.use(express_1.default.static('public'));
 // http://expressjs.com/en/starter/basic-routing.html
@@ -40,7 +41,7 @@ app.post('/parse/', async function (request, response) {
     console.log("I got something");
     console.log(request.body);
     if (!request.body) {
-        response.send(500);
+        response.sendStatus(500);
     }
     const content = request.body.fileContent;
     const pxe = request.body.pxe;

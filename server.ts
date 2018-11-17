@@ -16,6 +16,8 @@ const app = express();
 //provide browserified versions of all the files in the script directory
 app.use('/js', browserify(__dirname + '/script'));
 
+app.use(express.json());
+
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
